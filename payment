@@ -1,0 +1,124 @@
+//http://60.243.219.21:3000/recivedpayment?orderid=%22thisisorder1created%22
+
+const { response } = require('express');
+
+
+
+const sdk = require('api')('@cashfreedocs-new/v1#5232kkwyp8vyl');
+
+sdk.CreateOrder({
+  customer_details: {
+    customer_id: '19311a04g2',
+    customer_email: 'gunreddyvishnu@gmail.com',
+    customer_phone: '9666222330'
+  },
+  order_meta: {
+    notify_url: 'http://60.243.219.21:3000/recivedpayment',
+    payment_methods: '"cc", "dc", "ccc", "ppc", "nb", "upi", "paypal", "app"'
+  },
+  order_tags: {
+    newKey: '',
+    'newKey-1': 'New Value',
+    'newKey-2': 'New Value'
+  },
+  order_currency: 'INR',
+  order_amount: 700,
+  order_id: 'thisisorder1created',
+  order_note: 'testorder'
+}, {
+  'x-client-id': '125387014252ac8d3da353ceea783521',
+  'x-client-secret': '65bbddb20cf3e741c95f9835c5b379f75d504a6b',
+  'x-api-version': '2021-05-21'
+})
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+////
+
+
+response
+{
+    "cf_order_id": 2094971,
+    "order_id": "order222",
+    "entity": "order",
+    "order_currency": "INR",
+    "order_amount": 400,
+    "order_expiry_time": "2022-02-19T14:15:02+05:30",
+    "customer_details": {
+      "customer_id": "19311a04g2",
+      "customer_name": null,
+      "customer_email": "gunreddyvishnu@gmail.com",
+      "customer_phone": "9666222330"
+    },
+    "order_meta": {
+      "return_url": null,
+      "notify_url": "http://60.243.219.21:3000/recivedpayment?orderid=%22order222%22",
+      "payment_methods": null
+    },
+    "settlements": {
+      "url": "https://sandbox.cashfree.com/pg/orders/order222/settlements"
+    },
+    "payments": {
+      "url": "https://sandbox.cashfree.com/pg/orders/order222/payments"
+    },
+    "refunds": {
+      "url": "https://sandbox.cashfree.com/pg/orders/order222/refunds"
+    },
+    "order_status": "ACTIVE",
+    "order_token": "aa6jcVMO0uFdlKlbKlhH",
+    "order_note": null,
+    "payment_link": "https://payments-test.cashfree.com/order/#aa6jcVMO0uFdlKlbKlhH",
+    "order_tags": null,
+    "order_splits": []
+  }
+  ////
+
+
+  ////order_12538723xEad1fPsgqhVjM7pphIqJpxHI
+  ///2094902
+
+
+
+  /////
+  ////
+
+
+
+  paymentsdk.CreateOrder({
+    customer_details: {
+      customer_id: '19311a04g2',
+      customer_email: 'gunreddyvishnu@gmail.com',
+      customer_phone: '9666222330'
+    },
+    order_meta: {
+      notify_url: 'http://60.243.219.21:3000/recivedpayment?orderid='+customer_mobileno+new Date().toISOString,
+      payment_methods: '"cc", "dc", "ccc", "ppc", "nb", "upi", "paypal", "app"'
+    },
+    order_tags: {
+      newKey: '',
+      'newKey-1': 'New Value',
+      'newKey-2': 'New Value'
+    },
+    order_currency: 'INR',
+    order_amount:orderamount ,
+    order_id: customer_mobileno+new Date().toISOString,
+    order_note: 'howla games wallet recharge of rs '+orderamount+'on '+new Date()
+  }, {
+    'x-client-id': '125387014252ac8d3da353ceea783521',
+    'x-client-secret': '65bbddb20cf3e741c95f9835c5b379f75d504a6b',
+    'x-api-version': '2021-05-21'
+  })
+    .then(__order => {
+
+res.status(200).send({
+
+"order":__order,
+"status":"good"
+
+})
+
+    })
+    .catch(err => res.status(405).send({
+        "error":err,
+        "status":"bad"
+    }));

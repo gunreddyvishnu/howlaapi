@@ -1,0 +1,21 @@
+[debug] [2022-01-19T19:10:06.322Z] ----------------------------------------------------------------------
+[debug] [2022-01-19T19:10:06.325Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2022-01-19T19:10:06.326Z] CLI Version:   10.1.1
+[debug] [2022-01-19T19:10:06.326Z] Platform:      linux
+[debug] [2022-01-19T19:10:06.327Z] Node Version:  v16.13.2
+[debug] [2022-01-19T19:10:06.327Z] Time:          Thu Jan 20 2022 00:40:06 GMT+0530 (India Standard Time)
+[debug] [2022-01-19T19:10:06.328Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-19T19:10:06.338Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-19T19:10:06.338Z] > authorizing via signed-in user (gunreddyvishnuvardhanreddy@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/vishnu/Desktop/uno api
+
